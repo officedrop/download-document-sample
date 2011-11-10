@@ -69,7 +69,7 @@ public class DownloadSample {
 
         String filename = disposition.substring( disposition.indexOf("=") + 1 );
 
-        System.out.println( "Writting to file " + filename );
+        System.out.println( "Writing to file " + filename );
 
         OutputStream out = new BufferedOutputStream(  new FileOutputStream( filename ) );
         finalResponse.getEntity().writeTo( out );
