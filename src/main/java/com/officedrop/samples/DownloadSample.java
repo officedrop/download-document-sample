@@ -73,6 +73,7 @@ public class DownloadSample {
 
         OutputStream out = new BufferedOutputStream(  new FileOutputStream( filename ) );
         finalResponse.getEntity().writeTo( out );
+        finalResponse.getEntity().getContent().close();
         out.flush();
         out.close();
 
